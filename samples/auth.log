@@ -1,0 +1,9 @@
+2026-11-03T12:00:00+09:00 INFO worker synthetic report delivery started batch_id=demo-073 account=demo-worker credential_ref=demo-key-old
+2026-11-03T12:00:01+09:00 ERROR auth Authentication failed status=401 account=demo-worker credential_ref=demo-key-old reason=credential_expired
+2026-11-03T12:00:02+09:00 WARN worker report delivery aborted batch_id=demo-073 status=401
+2026-11-03T12:01:00+09:00 INFO auth synthetic credential inspection credential_ref=demo-key-old expired_at=2026-11-03T11:59:00+09:00
+2026-11-03T12:01:10+09:00 INFO monitor account=demo-worker permissions=unchanged network_health=ok
+2026-11-03T12:02:00+09:00 INFO operator synthetic recovery action="switched to valid credential" account=demo-worker credential_ref=demo-key-new
+2026-11-03T12:02:01+09:00 INFO auth credential validation passed account=demo-worker credential_ref=demo-key-new
+2026-11-03T12:02:05+09:00 INFO worker report delivery retry succeeded batch_id=demo-073 status=200
+2026-11-03T12:03:00+09:00 INFO monitor synthetic observation complete auth_failures=0

@@ -1,0 +1,8 @@
+2026-11-03T13:00:00+09:00 INFO app synthetic hourly health observation started service=demo-portal
+2026-11-03T13:00:01+09:00 INFO gateway health check passed status=200 duration_ms=24
+2026-11-03T13:00:02+09:00 INFO database health=ok active_connections=12 connection_limit=100
+2026-11-03T13:00:03+09:00 INFO storage volume=demo-data disk_usage=45% inode_usage=8%
+2026-11-03T13:00:04+09:00 INFO worker queue_depth=0 failed_jobs=0
+2026-11-03T13:00:05+09:00 INFO auth credential validation passed account=demo-worker
+2026-11-03T13:00:06+09:00 INFO app synthetic report generation succeeded job_id=demo-088 status=200 duration_ms=180
+2026-11-03T13:01:00+09:00 INFO monitor synthetic observation complete observation_window=60s error_count=0

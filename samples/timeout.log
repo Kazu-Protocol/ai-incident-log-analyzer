@@ -1,0 +1,9 @@
+2026-11-03T10:15:00+09:00 INFO config synthetic change applied service=gateway upstream=inventory-demo upstream_port=8081 change_id=demo-change-017
+2026-11-03T10:15:02+09:00 ERROR gateway connection refused upstream=inventory-demo port=8081 request_id=demo-001
+2026-11-03T10:15:03+09:00 ERROR gateway request timeout after retries request_id=demo-001
+2026-11-03T10:15:05+09:00 ERROR gateway service unavailable status=503 request_id=demo-001
+2026-11-03T10:16:00+09:00 INFO inventory-demo process=running listening_port=8080 health=ok
+2026-11-03T10:16:10+09:00 INFO operator synthetic config inspection gateway_upstream_port=8081 inventory_listening_port=8080
+2026-11-03T10:17:00+09:00 INFO operator synthetic recovery action="corrected upstream port" service=gateway upstream=inventory-demo upstream_port=8080
+2026-11-03T10:17:05+09:00 INFO gateway request retry succeeded request_id=demo-001 upstream=inventory-demo port=8080 status=200
+2026-11-03T10:18:00+09:00 INFO monitor synthetic observation complete gateway_errors=0

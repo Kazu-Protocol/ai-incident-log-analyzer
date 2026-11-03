@@ -1,0 +1,8 @@
+2026-11-03T11:00:00+09:00 INFO app synthetic invoice export started job_id=demo-042 output_volume=demo-data
+2026-11-03T11:00:02+09:00 WARN storage disk usage=98% volume=demo-data
+2026-11-03T11:00:04+09:00 ERROR app invoice export failed job_id=demo-042 output_volume=demo-data errno=ENOSPC message="No space left on device"
+2026-11-03T11:00:05+09:00 ERROR storage disk usage=100% volume=demo-data inode_usage=12%
+2026-11-03T11:00:06+09:00 INFO monitor database health=ok network health=ok
+2026-11-03T11:05:00+09:00 INFO operator synthetic recovery action="expanded volume" volume=demo-data disk_usage_after=65%
+2026-11-03T11:05:10+09:00 INFO app invoice export retry succeeded job_id=demo-042 output_volume=demo-data
+2026-11-03T11:06:00+09:00 INFO monitor synthetic observation complete invoice_export_errors=0
