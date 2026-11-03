@@ -5,9 +5,9 @@ PythonとStreamlitで作った、OpenAIのAIにログを読ませて障害調査
 
 ## 制作の目的
 
-インフラ・運用の経験を、AIを使ったアプリ開発に結び付けるポートフォリオとして制作しました。
-株式会社ルートゼロへの応募を念頭に、参照チャットで紹介されたAI関連開発・運用経験という観点を踏まえています。同社の公式製品ではありません。
-生成AIを開発支援にも使用し、画面は制作者の希望に沿って調整しています。
+サーバー構築・運用保守の現場では、障害発生時に大量のログから原因の手がかりを探す初動調査に時間がかかります。
+この作業をAIで支援できるかを試すため、インフラ・運用の経験とAIを使ったアプリ開発を結び付けるポートフォリオとして制作しました。
+生成AI（ChatGPT）を開発支援に使用し、画面や動作は制作者の希望に沿って調整しています。
 
 ## 機能
 
@@ -125,34 +125,6 @@ docs/               検証記録、シナリオの想定正解
 OpenAIの[Structured Outputs](https://developers.openai.com/api/docs/guides/structured-outputs)とPydanticで結果の構造を検査し、存在しない根拠行はエラーにします。
 依存関係は互換範囲指定です。StreamlitのDeployとメニューは画面用のCSSで隠しています。Streamlit更新で表示構造が変わる場合は再確認します。
 
-## GitHubへの公開手順
+## 作成者
 
-GitHubへのアップロードはこの成果物の作成時には行っていません。
-GitHubで空のリポジトリを作り、**このREADMEのあるフォルダ**で実行します。親のCodexフォルダ全体を登録しないでください。
-
-```sh
-git init -b main
-git add app.py analyzer.py requirements.txt requirements-dev.txt README.md .gitignore .env.example .streamlit/config.toml .streamlit/secrets.toml.example samples tests docs .github
-git diff --cached --stat
-git diff --cached
-git check-ignore .streamlit/secrets.toml
-python -m pytest -q
-git commit -m "Build AI log analysis app"
-```
-
-登録内容にキー・個人情報・実務ログがないことを確認します。
-続いてURLを自身のGitHubリポジトリのものに置換して実行します。
-
-```sh
-git remote add origin https://github.com/YOUR_USERNAME/ai-incident-log-analyzer.git
-git push -u origin main
-```
-
-一度でもキーを公開した場合は削除だけでは不十分です。キーを失効・再発行してください。
-コードを公開することと、動くWebアプリを公開することは別です。
-
-## 応募時に説明すること
-
-制作目的、画面や設計で工夫した点、生成AIを開発支援に使った範囲、実際に試したログとAIの結果、改善したい点を自身の言葉で説明してください。
-「架空ログの検証シナリオで確認」と「実業務の障害を解決した実績」を区別します。
-実APIで確認していない内容や、GitHub公開前のURLを実績として記載しないでください。
+原口 和久　— インフラエンジニア（サーバー構築・運用保守 約33年）
